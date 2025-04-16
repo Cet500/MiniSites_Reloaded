@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Dynamic Tooltips</title>
+
+		<style>
+			.body{
+				font-family: Verdana, Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+			}
+			.example-block{
+				padding: 50px;
+				font-size: 30px;
+				background-color: #dfdfdf;
+				width: fit-content;
+				border-radius: 10px;
+			}
+
+			/* Стили для подсказки */
+			.tooltip {
+				position: fixed; /* Подсказка будет следовать за курсором */
+				background-color: rgba(0, 0, 0, 0.75);
+				color: white;
+				padding: 6px 12px;
+				border-radius: 6px;
+				font-size: 16px;
+				white-space: nowrap;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s ease, visibility 0.3s ease;
+				pointer-events: none; /* Чтобы подсказка не блокировала взаимодействие */
+				z-index: 1000; /* Убедитесь, что подсказка поверх других элементов */
+			}
+			.tooltip div {
+				height: 2px;
+			}
+		</style>
+	</head>
+	<body class="body">
+		<div data-tooltip="Я\nЕсть\nПодсказка" class="example-block">Наведись на меня!</div>
+
+		<!-- Контейнер для подсказки -->
+		<div id="tooltip" class="tooltip"></div>
+
+		<script>
+	        document.addEventListener("DOMContentLoaded", () => {
+	            const tooltip = document.getElementById("tooltip"); // Контейнер для подсказки
+	            const areas = document.querySelectorAll("*"); // Все элементы с подсказками
+
+	            areas.forEach((area) => {
+	                area.addEventListener("mouseenter", (e) => {
+	                    let tooltipText = area.getAttribute("data-tooltip"); // Получаем текст подсказки
+	                    tooltipText = tooltipText.replace(/\\n/g, "<div></div>");
+	                    tooltip.innerHTML = tooltipText; // Устанавливаем текст в подсказку
+
+	                    // Показываем подсказку
+	                    tooltip.style.opacity = "1";
+	                    tooltip.style.visibility = "visible";
+	                });
+
+	                area.addEventListener("mousemove", (e) => {
+	                    // Позиционируем подсказку рядом с курсором
+	                    tooltip.style.left = `${e.clientX + 15}px`; // +10px отступ от курсора
+	                    tooltip.style.top = `${e.clientY + 20}px`;
+	                });
+
+	                area.addEventListener("mouseleave", () => {
+	                    // Скрываем подсказку
+	                    tooltip.style.opacity = "0";
+	                    tooltip.style.visibility = "hidden";
+	                });
+	            });
+	        });
+		</script>
+	</body>
+</html>
