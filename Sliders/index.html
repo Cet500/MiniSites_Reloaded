@@ -1,0 +1,261 @@
+<div class="slider-wrapper">
+    <label for="volumeSlider">По умолчанию</label>
+    <input type="range" class="custom-slider" id="volumeSlider" min="0" max="100" value="50">
+</div>
+
+<div class="slider-wrapper">
+    <label for="volumeZebraSlider">По умолчанию ( полосочки )</label>
+    <input type="range" class="custom-slider zebra" id="volumeZebraSlider" min="0" max="100" value="50">
+</div>
+
+<div class="slider-wrapper">
+    <label for="qualitySlider">Всё хорошо</label>
+    <input type="range" class="custom-slider good" id="qualitySlider" min="0" max="100" value="75">
+</div>
+
+<div class="slider-wrapper">
+    <label for="qualityZebraSlider">Всё хорошо ( полосочки )</label>
+    <input type="range" class="custom-slider good zebra" id="qualityZebraSlider" min="0" max="100" value="75">
+</div>
+
+<div class="slider-wrapper">
+    <label for="warningSlider">Предупреждения</label>
+    <input type="range" class="custom-slider warning" id="warningSlider" min="0" max="100" value="75">
+</div>
+
+<div class="slider-wrapper">
+    <label for="warningZebraSlider">Предупреждения ( полосочки )</label>
+    <input type="range" class="custom-slider warning zebra" id="warningZebraSlider" min="0" max="100" value="75">
+</div>
+
+<div class="slider-wrapper">
+    <label for="errorSlider">Ошибки</label>
+    <input type="range" class="custom-slider bad" id="errorSlider" min="0" max="100" value="25">
+</div>
+
+<div class="slider-wrapper">
+    <label for="errorZebraSlider">Ошибки ( полосочки )</label>
+    <input type="range" class="custom-slider bad zebra" id="errorZebraSlider" min="0" max="100" value="25">
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+
+    :root {
+        --clr-white: #ffffff;
+
+        /* Синяя гамма (accent) */
+        --clr-accent: #3b82f6;
+        --clr-accent-100: #dbeafe;
+        --clr-accent-200: #bfdbfe;
+        --clr-accent-300: #93c5fd;
+        --clr-accent-400: #60a5fa;
+        --clr-accent-500: #3b82f6;
+        --clr-accent-600: #2563eb;
+        --clr-accent-700: #1d4ed8;
+        --clr-accent-800: #1e40af;
+        --clr-accent-900: #1e3a8a;
+
+        /* Зелёная гамма (good) */
+        --clr-good: #10b981;
+        --clr-good-100: #d1fae5;
+        --clr-good-200: #a7f3d0;
+        --clr-good-300: #6ee7b7;
+        --clr-good-400: #34d399;
+        --clr-good-500: #10b981;
+        --clr-good-600: #059669;
+        --clr-good-700: #047857;
+        --clr-good-800: #065f46;
+        --clr-good-900: #064e3b;
+
+        /* Оранжевая гамма (warning) */
+        --clr-warning: #f59e0b;
+        --clr-warning-100: #fef3c7;
+        --clr-warning-200: #fde68a;
+        --clr-warning-300: #fcd34d;
+        --clr-warning-400: #fbbf24;
+        --clr-warning-500: #f59e0b;
+        --clr-warning-600: #d97706;
+        --clr-warning-700: #b45309;
+        --clr-warning-800: #92400e;
+        --clr-warning-900: #78350f;
+
+        /* Красная гамма (bad) */
+        --clr-bad: #ef4444;
+        --clr-bad-100: #fee2e2;
+        --clr-bad-200: #fecaca;
+        --clr-bad-300: #fca5a5;
+        --clr-bad-400: #f87171;
+        --clr-bad-500: #ef4444;
+        --clr-bad-600: #dc2626;
+        --clr-bad-700: #b91c1c;
+        --clr-bad-800: #991b1b;
+        --clr-bad-900: #7f1d1d;
+    }
+
+    .slider-wrapper {
+        width: 100%;
+        max-width: 600px;
+        margin: 2rem auto;
+        font-family: 'Exo 2', sans-serif;
+    }
+    .slider-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .slider-header label {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .slider-header .slider-value {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 24px;
+    }
+
+    .slider-track {
+        position: absolute;
+        width: 100%;
+        height: 24px;
+        border-radius: 12px;
+        background: white;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+     .slider-fill {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        background: var(--slider-fill, var(--clr-accent));
+     }
+     .slider-fill.zebra {
+        --slider-dark: var(--clr-accent-600);
+        --slider-light: var(--clr-accent-500);
+        background: repeating-linear-gradient(
+            -45deg,
+            var(--slider-dark) 0px,
+            var(--slider-dark) 12px,
+            var(--slider-light) 12px,
+            var(--slider-light) 24px
+        );
+     }
+
+    /* Цветовые схемы */
+    .slider-fill.good {
+        --slider-fill: var(--clr-good);
+        --slider-dark: var(--clr-good-600);
+        --slider-light: var(--clr-good-500);
+    }
+
+    .slider-fill.warning {
+        --slider-fill: var(--clr-warning);
+        --slider-dark: var(--clr-warning-600);
+        --slider-light: var(--clr-warning-500);
+    }
+
+    .slider-fill.bad {
+        --slider-fill: var(--clr-bad);
+        --slider-dark: var(--clr-bad-600);
+        --slider-light: var(--clr-bad-500);
+    }
+
+    .custom-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 24px;
+        position: relative;
+        margin: 0;
+        background: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .custom-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .custom-slider::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.custom-slider').forEach(slider => {
+            initSlider(slider);
+        });
+    });
+
+    function initSlider(slider) {
+        const wrapper = slider.parentElement;
+        const label = wrapper.querySelector('label');
+        const id = slider.id;
+
+        const valueDisplay = document.createElement('span');
+        valueDisplay.className = 'slider-value';
+        valueDisplay.id = `${id}-value`;
+        valueDisplay.textContent = slider.value;
+
+        const header = document.createElement('div');
+        header.className = 'slider-header';
+        header.appendChild(label.cloneNode(true));
+        header.appendChild(valueDisplay);
+
+        const container = document.createElement('div');
+        container.className = 'slider-container';
+
+        const track = document.createElement('div');
+        track.className = 'slider-track';
+
+        const fill = document.createElement('div');
+        fill.className = 'slider-fill';
+
+        // Добавляем классы для цветов и zebra-эффекта
+        if (slider.classList.contains('good')) fill.classList.add('good');
+        if (slider.classList.contains('warning')) fill.classList.add('warning');
+        if (slider.classList.contains('bad')) fill.classList.add('bad');
+        if (slider.classList.contains('zebra')) fill.classList.add('zebra');
+
+        track.appendChild(fill);
+        container.appendChild(track);
+        container.appendChild(slider);
+
+        wrapper.innerHTML = '';
+        wrapper.appendChild(header);
+        wrapper.appendChild(container);
+
+        function updateSlider() {
+            const min = parseFloat(slider.min);
+            const max = parseFloat(slider.max);
+            const value = parseFloat(slider.value);
+            const thumbSize = 24;
+            const trackWidth = slider.offsetWidth;
+            const percent = (value - min) / (max - min);
+            const fillWidth = percent * (trackWidth - thumbSize) + thumbSize / 2;
+
+            fill.style.width = `${fillWidth}px`;
+            valueDisplay.textContent = value;
+        }
+
+        slider.addEventListener('input', updateSlider);
+        window.addEventListener('resize', updateSlider);
+        updateSlider();
+    }
+</script>
