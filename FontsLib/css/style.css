@@ -1,0 +1,95 @@
+:root {
+	--bg-light: #f5f7fa;
+	--text-light: #222;
+	--card-light: #ffffff;
+	--border-light: #dce1e7;
+
+	--bg-dark: #121212;
+	--text-dark: #eaeaea;
+	--card-dark: #1e1e1e;
+	--border-dark: #2a2a2a;
+
+	--shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+	--shadow-normal: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body {
+	margin: 0;
+	font-family: 'Segoe UI', sans-serif;
+	transition: background 0.3s, color 0.3s;
+}
+
+.light {
+	background: var(--bg-light);
+	color: var(--text-light);
+}
+
+.dark {
+	background: var(--bg-dark);
+	color: var(--text-dark);
+}
+
+.container {
+	max-width: 1200px;
+	margin: 3rem auto;
+	padding: 2rem;
+	border-radius: 16px;
+	transition: background 0.3s;
+}
+
+.light .container {
+	background: var(--card-light);
+	border: 1px solid var(--border-light);
+}
+
+.dark .container {
+	background: var(--card-dark);
+	border: 1px solid var(--border-dark);
+}
+
+.theme-toggle {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: inherit;
+}
+
+.font-sample {
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	border-radius: 14px;
+	background: inherit;
+	box-shadow: var(--shadow-normal);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.font-sample:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-hover);
+}
+
+.light .font-sample {
+	background: #f7fafa;
+}
+
+.dark .font-sample {
+	background: #2a2d31;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+p{
+	font-size: 1.35em;
+}
