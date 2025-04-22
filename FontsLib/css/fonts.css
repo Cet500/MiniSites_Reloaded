@@ -1,0 +1,372 @@
+/* ---------------------------------- fonts --------------------------------- */
+
+/* ------------------- 28 Days Later -------------------- */
+
+@font-face {
+	font-family: '28 Days Later';
+	src: local('28 Days Later'),
+		 url('../fonts/28 Days Later/28 Days Later.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ---------------------- a_LCDNova --------------------- */
+
+@font-face {
+	font-family: 'a_LCDNova';
+	src: local('a_LCDNova'),
+		 url('../fonts/a_LCDNova/a_LCDNova.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* --------------------- airstrike ---------------------- */
+
+@font-face {
+	font-family: 'airstrike';
+	src: local('airstrike'),
+		 local('airstrike Regular'),
+		 local('airstrike-regular'),
+		 url('../fonts/airstrike/airstrike.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ------------------ Android Insomnia ------------------ */
+
+@font-face {
+	font-family: 'Android Insomnia';
+	src: local('Android Insomnia'),
+		 local('Android Insomnia Regular'),
+		 url('../fonts/Android Insomnia/AndroidInsomniaRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ------------------------ Arial ----------------------- */
+
+@font-face {
+	font-family: 'Arial';
+	src: local('Arial'),
+		 url('../fonts/Arial/Arial.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* -------------------- Arizone Unicase ------------------ */
+
+@font-face {
+	font-family: 'Arizone Unicase';
+	src: local('Arizone Unicase'),
+		 local('Arizone Unicase Regular'),
+		 url('../fonts/Arizone Unicase/ArizoneUnicaseRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* --------------------- Astro Space -------------------- */
+
+@font-face {
+	font-family: 'Astro Space';
+	src: local('Astro Space'),
+		 local('Astro Space Regular'),
+		 url('../fonts/Astro Space/AstroSpace.ttf') format('truetype'),
+		 url('../fonts/Astro Space/AstroSpace.otf') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* --------------------- BadaBoom BB -------------------- */
+
+@font-face {
+	font-family: 'BadaBoom BB';
+	src: local('BadaBoom BB'),
+		 url('../fonts/badaboom/BadaBoom BB.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* --------------------- Bahnschrift -------------------- */
+
+@font-face {
+	font-family: 'Bahnschrift';
+	src: local('Bahnschrift'),
+		 local('Bahnschrift Regular'),
+		 local('Bahnschrift-Regular'),
+		 url('../fonts/Bahnschrift/Bahnschrift.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ------------------------ Beon ------------------------ */
+
+@font-face {
+	font-family: 'Beon';
+	src: local('Beon'),
+		 local('Beon Regular'),
+		 url('../fonts/Beon/BeonMedium.ttf') format('truetype'),
+		 url('../fonts/Beon/BeonMedium.otf') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ----------------------- Calibri ---------------------- */
+
+@font-face {
+	font-family: 'Calibri';
+	src: local('Calibri'),
+		 url('../fonts/Calibri/Calibri.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ----------------------- Cambria ---------------------- */
+
+@font-face {
+	font-family: 'Cambria';
+	src: local('Cambria'),
+		 url('../fonts/Cambria/Cambria.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Cambria/Cambria.woff') format('woff'),
+		 url('../fonts/Cambria/Cambria.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* --------------------- Capture it --------------------- */
+
+@font-face {
+	font-family: 'Capture it';
+	src: local('Capture it'),
+		 url('../fonts/Capture it/Capture it.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ---------------------- Comfortaa --------------------- */
+
+@font-face {
+	font-family: 'Comfortaa';
+	src: local('Comfortaa'),
+		url('../fonts/Comfortaa/Comfortaa.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ---------------------- Consolas ---------------------- */
+
+@font-face {
+	font-family: 'Consolas';
+	src: local('Consolas'),
+		 url('../fonts/Consolas/Consolas.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ------------------- ExoTwo / Exo 2 ------------------- */
+
+@font-face {
+	font-family: 'Exo 2';
+	src: local('Exo 2'),
+		 local('Exo2-Regular'),
+		 url('../fonts/ExoTwo/exo2.woff2') format('woff2'),
+		 url('../fonts/ExoTwo/exo2.woff') format('woff'),
+		 url('../fonts/ExoTwo/exo2.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* ------------------------ Lato ------------------------ */
+
+@font-face {
+	font-family: 'Lato';
+	src: local('Lato'),
+		 url('../fonts/Lato/Lato.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ------------------- Lucida Console ------------------- */
+
+@font-face {
+	font-family: 'Lucida Console';
+	src: local('Lucida Console'),
+		 url('../fonts/Lucida Console/Lucida Console.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ------------------- Magnolia Script ------------------ */
+
+@font-face {
+	font-family: 'Magnolia Script';
+	src: local('Magnolia Script'),
+		 url('../fonts/Magnolia Script/magnolia-script.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* -------------- Minecraft Title Cyrillic -------------- */
+
+@font-face {
+	font-family: 'Minecraft Title Cyrillic';
+	src: local('Minecraft Title Cyrillic'),
+		 url('../fonts/Minecraft Title Cyrillic/Minecraft Title Cyrillic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* --------------------- Minecraftia -------------------- */
+
+@font-face {
+	font-family: 'Minecraftia';
+	src: local('Minecraftia'),
+		 url('../fonts/Minecraftia/Minecraftia.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* --------------------- Montserrat --------------------- */
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat/Montserrat-Regular.eot');
+	src: local('Montserrat Regular'),
+		 local('Montserrat-Regular'),
+		 url('../fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff'),
+		 url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ------------------------ Nero ------------------------ */
+
+@font-face {
+	font-family: 'Nero';
+	src: local('Nero'),
+		 local('Nero Regular'),
+		 url('../fonts/Nero/Nero.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ----------------------- Nunito ----------------------- */
+
+@font-face {
+	font-family: 'Nunito';
+	src: local('Nunito'),
+		 local('Nunito Regular'),
+		 local('Nunito-Regular'),
+		 url('../fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ---------------------- Open Sans --------------------- */
+
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans'),
+		 local('Open Sans Regular'),
+		 local('OpenSans-Regular'),
+		 url('../fonts/Open Sans/OpenSans-Regular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ----------------------- Roboto ----------------------- */
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto/Roboto-Regular.eot');
+	src: local('Roboto'),
+		 local('Roboto-Regular'),
+		 url('../fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Roboto/Roboto-Regular.woff') format('woff'),
+		 url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ------------------- Rogueland Slab ------------------- */
+
+@font-face {
+	font-family: 'Rogueland Slab';
+	src: local('Rogueland Slab'),
+		 local('Rogueland Slab Bold'),
+		 url('../fonts/Rogueland Slab/RoguelandSlabBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* -------------------- Segoe Script -------------------- */
+
+@font-face {
+	font-family: 'Segoe Script';
+	src: local('Segoe Script'),
+		 url('../fonts/Segoe Script/Segoe Script.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* -------------------- Segoe Print --------------------- */
+
+@font-face {
+	font-family: 'Segoe Print';
+	src: local('Segoe Print'),
+	url('../fonts/Segoe Print/Segoe Print.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ---------------------- Showtime ---------------------- */
+
+@font-face {
+	font-family: 'Showtime';
+	src: local('Showtime'),
+		 local('Showtime Regular'),
+		 url('../fonts/Showtime/Showtime.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ----------------------- Tahoma ----------------------- */
+
+@font-face {
+	font-family: 'Tahoma';
+	src: local('Tahoma'),
+		 url('../fonts/Tahoma/Tahoma.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+/* ------------------ Times New Roman ------------------- */
+
+@font-face {
+	font-family: 'Times New Roman';
+	src: local('Times New Roman'),
+		 url('../fonts/Times New Roman/Times New Roman.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ---------------------- VAG World --------------------- */
+
+@font-face {
+	font-family: 'VAG World';
+	src: local('VAG World'),
+		 url('../fonts/VAG World/VAG World.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ---------------------- Verdana ----------------------- */
+
+@font-face {
+	font-family: 'Verdana';
+	src: local('Verdana'),
+		 url('../fonts/Verdana/Verdana.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
