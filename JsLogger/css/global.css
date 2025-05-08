@@ -1,0 +1,169 @@
+.body {
+	font-family: Consolas, monospace;
+	background: #1c1c1c;
+	font-size: 22px;
+	margin: 0;
+	padding: 0;
+}
+
+.header{
+	position: sticky;
+	top: 0;
+	background: #2e2e2e;
+	padding: 20px 60px;
+}
+
+.header__title {
+	color: #0dcaf0;
+	margin: 0;
+	font-size: 2em;
+}
+
+.content{
+	margin: 20px 10px 20px 0;
+	padding: 0 50px 0 60px;
+	overflow-y: scroll;
+	max-height: calc(calc(100vh - 40px) - 91px);
+}
+.content::-webkit-scrollbar,
+.content::-webkit-scrollbar-thumb{
+	width: 10px;
+	border-radius: 5px;
+}
+.content::-webkit-scrollbar{
+	background-color: #42464c;
+}
+.content::-webkit-scrollbar-thumb{
+	background-color: #5d6468;
+}
+.content::-webkit-scrollbar-button{
+	display: none;
+}
+
+.log-record {
+	display: block;
+	margin-bottom: 8px;
+	padding: 6px 20px;
+	border-radius: 6px;
+	font-size: 1em;
+	background-color: #242424;
+	color: #D3D3D3;
+}
+
+.log-record:has(.log-record__level--trace) {
+	background-color: #212121;
+	color: #888;
+}
+
+.log-record:has(.log-record__level--debug) {
+	background-color: #242424;
+	color: #b3b3b3;
+}
+
+.log-record:has(.log-record__level--info) {
+	background-color: #2e2e2e;
+	color: #e6e6e6;
+}
+.log-record:has(.log-record__level--info) .log-record__level {
+	color: #3590e6;
+}
+
+.log-record:has(.log-record__level--success) {
+	background-color: #2e2e2e;
+	color: #d9ffb3;
+}
+.log-record:has(.log-record__level--success) .log-record__level {
+	color: #4FE34F;
+}
+
+.log-record:has(.log-record__level--warning) {
+	background-color: #2e2e2e;
+	color: #ffecb3;
+}
+.log-record:has(.log-record__level--warning) .log-record__level {
+	color: #CCCC3D;
+}
+
+.log-record:has(.log-record__level--error) {
+	background-color: #2e2e2e;
+	color: #ffa6a6;
+}
+.log-record:has(.log-record__level--error) .log-record__level {
+	color: #E35C4F;
+}
+
+.log-record:has(.log-record__level--critical) {
+	background-color: #2e2e2e;
+	color: #ff6666;
+}
+.log-record:has(.log-record__level--critical) .log-record__level {
+	color: #ff3826;
+}
+
+.log-record .log-record__separator{
+	color: #666;
+}
+.log-record .log-record__datetime{
+	color: #b3b3b3;
+}
+
+
+@media screen and ( max-width: 1650px ) {
+
+	.body{
+		font-size: 20px;
+	}
+
+	.header{
+		padding: 15px 40px;
+	}
+
+	.content{
+		margin: 20px 0;
+		padding: 0 40px;
+		max-height: calc(calc(100vh - 40px) - 77px);
+	}
+
+}
+
+@media screen and ( max-width: 1200px ) {
+
+	.body{
+		font-size: 18px;
+	}
+
+	.header{
+		padding: 10px 30px;
+	}
+	.header__title{
+		font-size: 1.5em;
+	}
+
+	.content{
+		margin: 20px 0;
+		padding: 0 30px;
+		max-height: calc(calc(100vh - 40px) - 52px);
+	}
+
+}
+
+@media screen and ( max-width: 800px ) {
+
+	.body{
+		font-size: 16px;
+	}
+
+	.header{
+		padding: 10px 20px;
+	}
+	.header__title{
+		font-size: 1.5em;
+	}
+
+	.content{
+		margin: 15px 0;
+		padding: 0 20px;
+		max-height: calc(calc(100vh - 30px) - 52px);
+	}
+
+}
