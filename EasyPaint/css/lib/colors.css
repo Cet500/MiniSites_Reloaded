@@ -1,0 +1,30 @@
+/* --------------------------------- colors --------------------------------- */
+
+/* --------------------- root colors -------------------- */
+
+:root{
+	/* monochrome */
+	--clr-white:        #FFFFFF;
+	--clr-almost-white: #EAEAEA;
+	--clr-gray-light:   #CCCCCC;
+	--clr-gray:         #666666;
+	--clr-gray-dark:    #2A2D31;
+	--clr-almost-black: #121212;
+	--clr-black:        #000000;
+
+	/* green */
+	--clr-green-light: #AEE4AB;
+	--clr-green-dark:  #1E561E;
+
+	/* blue */
+	--clr-blue-light:  #ABCEFF;
+	--clr-blue-dark:   #032B63;
+
+	/* sand */
+	--clr-sand-light:  #FFEBAB;
+	--clr-sand-dark:   #634B03;
+
+	/* red */
+	--clr-red-light:   #F0A6AC;
+	--clr-red-dark:    #721C24;
+}

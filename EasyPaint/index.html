@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>EasyPaint: Reinvented</title>
+
+		<link rel="stylesheet" href="css/lib/colors.css">
+		<link rel="stylesheet" href="css/src/global.css">
+		<link rel="stylesheet" href="css/lib/buttons.css">
+		<link rel="stylesheet" href="css/lib/modals.css">
+
+		<link rel="stylesheet" href="assets/fontawesome-free-6.7.2-web/css/fontawesome.css">
+		<link rel="stylesheet" href="assets/fontawesome-free-6.7.2-web/css/solid.css">
+	</head>
+
+	<body class="body">
+		<header class="header">
+			<div class="header__inner">
+				<h1 class="header-logo">
+					<i class="fa fa-pencil-alt"></i> EasyPaint
+				</h1>
+
+				<nav class="nav">
+					<button class="btn md green" id="button__save">
+						<i class="fa fa-floppy-disk"></i>
+						<span>сохранить</span>
+					</button>
+
+					<button class="btn md green" id="button__replay">
+						<i class="fa fa-rotate-right"></i>
+						<span>воспроизвести</span>
+					</button>
+
+					<button class="btn md blue" id="button__toggle-aside">
+						<i class="fa fa-bars"></i>
+						<span>панель</span>
+					</button>
+
+					<button class="btn md blue" id="button__toggle-theme">
+						<i class="fa fa-palette"></i>
+						<span>тема</span>
+					</button>
+
+					<button class="btn md sand" data-modal-id="modal__import">
+						<i class="fa fa-file-arrow-up"></i>
+						<span>импорт</span>
+					</button>
+
+					<button class="btn md sand" id="button_export" data-modal-id="modal__export">
+						<i class="fa fa-file-arrow-down"></i>
+						<span>экспорт</span>
+					</button>
+
+					<button class="btn md red" id="button__clear">
+						<i class="fa fa-file"></i>
+						<span>очистить</span>
+					</button>
+
+					<button class="btn md red" id="button__remove">
+						<i class="fa fa-trash-can"></i>
+						<span>удалить</span>
+					</button>
+				</nav>
+			</div>
+		</header>
+
+		<main class="main">
+			<canvas class="main__canvas" id="canvas__background"></canvas>
+		</main>
+
+		<div class="modal" id="modal__export">
+			<div class="modal__header">
+				<h2 class="modal-header__title">Экспорт данных</h2>
+			</div>
+
+			<div class="modal__content">
+				<span class="modal-content__data custom-scroll"></span>
+			</div>
+
+			<div class="modal__footer">
+				<button class="btn sm green close-modal">
+					принять
+				</button>
+
+				<button class="btn sm red close-modal">
+					закрыть
+				</button>
+			</div>
+		</div>
+
+		<div class="modal" id="modal__import">
+			<div class="modal__header">
+				<h2 class="modal-header__title">Импорт данных</h2>
+			</div>
+
+			<div class="modal__content">
+				<label for="script__data-import"></label>
+				<textarea class="modal-content__textarea custom-scroll" id="script__data-import" rows="10"></textarea>
+			</div>
+
+			<div class="modal__footer">
+				<button class="btn sm red close-modal" id="button_import">
+					закрыть
+				</button>
+			</div>
+		</div>
+
+		<aside class="aside active">
+			<section class="aside__block">
+				<h2 class="aside-block__header">
+					<i class="fa fa-gear"></i> Настройки EasyPaint
+				</h2>
+
+				<div class="aside-block__settings">
+					<div class="aside-block__settings-parameter">
+						<label for="param__line-color">Цвет линии</label>
+						<input type="color" id="param__line-color">
+					</div>
+
+					<div class="aside-block__settings-parameter">
+						<label for="param__line-size">Толщина линии</label>
+						<div>
+							<input type="number" id="param__line-size"> px
+						</div>
+					</div>
+
+					<div class="aside-block__settings-parameter">
+						<label for="param__bg-color">Цвет фона</label>
+						<input type="color" id="param__bg-color">
+					</div>
+				</div>
+
+				<div class="buttons">
+					<button class="btn md green" id="param__submit">
+						сохранить
+					</button>
+				</div>
+			</section>
+
+			<section class="aside__block">
+				<h2 class="aside-block__header">
+					<i class="fa fa-layer-group"></i> Слои EasyPaint
+				</h2>
+
+				<div class="aside-block__layers" id="layers-container">
+
+				</div>
+			</section>
+
+			<section class="aside__block">
+				<h2 class="aside-block__header">
+					<i class="fa fa-droplet"></i> Быстрые цвета
+				</h2>
+
+				<div class="aside-block__colors" id="colors-container">
+
+				</div>
+
+				<div class="buttons">
+					<button class="btn md green" id="button__add-fast-color">
+						добавить цвет
+					</button>
+				</div>
+			</section>
+		</aside>
+
+		<script src="js/lib/logger.js"></script>
+		<script src="js/lib/uuid.js"></script>
+
+		<script>
+            const logger = new Logger({
+                level: 'debug'
+            });
+		</script>
+
+		<script src="js/src/paint.js"></script>
+		<script src="js/src/paint_UI.js"></script>
+
+		<script src="js/modules/FastColors.js"></script>
+	</body>
+</html>

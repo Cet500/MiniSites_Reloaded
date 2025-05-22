@@ -1,0 +1,101 @@
+/* ------------------------------ buttons libs ------------------------------ */
+
+/* ------------------------ base ------------------------ */
+
+.btn{
+	border: none;
+	outline: none;
+	font-family: Comfortaa, sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	border-radius: 6px;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+	background-color: var(--btn-bg);
+	color: var(--btn-text);
+}
+
+/* ------------------------ size ------------------------ */
+
+.btn.sm{
+	padding: 5px 8px;
+}
+.btn.md{
+	padding: 6px 12px;
+}
+.btn.lg{
+	padding: 8px 16px;
+}
+
+/* -------------------- colors light -------------------- */
+
+.light .btn.green{
+	--btn-bg: var(--clr-green-light);
+	--btn-text: var(--clr-green-dark);
+}
+.light .btn.blue{
+	--btn-bg: var(--clr-blue-light);
+	--btn-text: var(--clr-blue-dark);
+}
+.light .btn.sand{
+	--btn-bg: var(--clr-sand-light);
+	--btn-text: var(--clr-sand-dark);
+}
+.light .btn.red{
+	--btn-bg: var(--clr-red-light);
+	--btn-text: var(--clr-red-dark);
+}
+
+/* -------------------- colors dark --------------------- */
+
+.dark .btn.green{
+	--btn-bg: var(--clr-green-dark);
+	--btn-text: var(--clr-green-light);
+}
+.dark .btn.blue{
+	--btn-bg: var(--clr-blue-dark);
+	--btn-text: var(--clr-blue-light);
+}
+.dark .btn.sand{
+	--btn-bg: var(--clr-sand-dark);
+	--btn-text: var(--clr-sand-light);
+}
+.dark .btn.red{
+	--btn-bg: var(--clr-red-dark);
+	--btn-text: var(--clr-red-light);
+}
+
+/* --------------------- colorized ---------------------- */
+
+.btn:hover{
+	background-color: color-mix(in srgb, var(--btn-bg), var(--clr-white) 25%);
+}
+.btn:active{
+	background-color: color-mix(in srgb, var(--btn-bg), var(--clr-black) 10%);
+	color: var(--clr-white);
+}
+
+/* ---------------------- outline ----------------------- */
+
+.btn.outline{
+	background-color: transparent;
+	outline: 2px solid var(--btn-bg);
+	color: var(--btn-text);
+}
+.btn.outline:hover {
+	background-color: var(--btn-bg);
+	color: var(--btn-text);
+}
+.btn.outline:active{
+	background-color: color-mix(in srgb, var(--btn-bg), var(--clr-black) 10%);
+	outline-color: color-mix(in srgb, var(--btn-bg), var(--clr-black) 10%);
+	color: var(--clr-white);
+}
+
+/* ---------------------- utility ----------------------- */
+
+.buttons{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}

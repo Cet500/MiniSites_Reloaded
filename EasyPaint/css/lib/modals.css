@@ -1,0 +1,137 @@
+/* ------------------------------- modals libs ------------------------------ */
+
+/* --------------------- modal base --------------------- */
+
+.modal{
+	position: absolute;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	z-index: 100;
+	height: 500px;
+	top: calc(calc(100% - 500px) / 2);
+	width: 1000px;
+	left: calc(calc(100% - 1000px) / 2);
+	border-radius: 20px;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0.9);
+	transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.modal[open] {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
+
+.modal__header{
+	padding: 8px 40px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.modal-header__title{
+	margin: 0;
+	font-size: 20px;
+}
+
+.modal__content{
+	padding: 15px;
+}
+
+.modal__content:has(.modal-content__data){
+	overflow: auto;
+}
+.modal-content__data{
+	display: block;
+	width:  calc(100% - 20px);
+	height: 100%;
+	padding: 0 10px;
+	font-family: Consolas, monospace;
+	font-size: 18px;
+}
+
+.modal-content__textarea{
+	font-family: Consolas, monospace;
+	font-size: 18px;
+	width:      calc(100% - 30px);
+	min-width:  calc(100% - 30px);
+	max-width:  calc(100% - 30px);
+	height:     calc(100% - 30px);
+	min-height: calc(100% - 30px);
+	max-height: calc(100% - 30px);
+	resize: none;
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+}
+.modal-content__textarea:focus{
+	outline: none;
+}
+
+.modal__footer{
+	text-align: right;
+	padding: 6px 40px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+/* -------------------- modal themes -------------------- */
+
+.light .modal{
+	background-color: var(--clr-white);
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.75);
+}
+.light .modal__header{
+	color: var(--clr-black);
+	background-color: var(--clr-almost-white);
+}
+.light .modal-content__textarea{
+	background-color: var(--clr-almost-white);
+	color: var(--clr-black);
+}
+.light .modal__footer{
+	background-color: var(--clr-almost-white);
+}
+
+.dark .modal{
+	background-color: var(--clr-almost-black);
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.75);
+}
+.dark .modal__header{
+	color: var(--clr-almost-white);
+	background-color: var(--clr-gray-dark);
+}
+.dark .modal-content__textarea{
+	background-color: var(--clr-gray-dark);
+	color: var(--clr-almost-white);
+}
+.dark .modal__footer{
+	background-color: var(--clr-gray-dark);
+}
+
+/* --------------------- scrollbar ---------------------- */
+
+.custom-scroll{
+	overflow-y: scroll;
+}
+.custom-scroll::-webkit-scrollbar,
+.custom-scroll::-webkit-scrollbar-thumb{
+	width: 10px;
+	border-radius: 5px;
+}
+.custom-scroll::-webkit-scrollbar-button{
+	display: none;
+}
+
+.light .custom-scroll::-webkit-scrollbar{
+	background-color: var(--clr-gray-light);
+}
+.light .custom-scroll::-webkit-scrollbar-thumb{
+	background-color: var(--clr-gray);
+}
+
+.dark .custom-scroll::-webkit-scrollbar{
+	background-color: var(--clr-gray);
+}
+.dark .custom-scroll::-webkit-scrollbar-thumb{
+	background-color: var(--clr-gray-light);
+}
