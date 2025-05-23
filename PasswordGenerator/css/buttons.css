@@ -1,0 +1,60 @@
+/* --------------------------------- buttons -------------------------------- */
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	margin-top: 24px;
+}
+
+.buttons .btn{
+	flex: 1;
+}
+
+/* ------------------------ base ------------------------ */
+
+.btn {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+
+.btn-primary{
+	background-color: var(--clr-blue);
+	color: white;
+}
+.btn-primary:hover {
+	background-color: var(--clr-blue-darker);
+}
+.btn-primary:active {
+	background-color: var(--clr-blue-lighter);
+}
+
+.btn-secondary{
+	border: 1px solid var(--clr-blue);
+	background-color: var(--clr-white);
+	color: var(--clr-blue);
+}
+.btn-secondary:hover{
+	border-color: var(--clr-blue-darker);
+	background-color: var(--clr-blue-darker);
+	color: var(--clr-white);
+}
+.btn-secondary:active{
+	border-color: var(--clr-blue-lighter);
+	background-color: var(--clr-blue-lighter);
+	color: var(--clr-white);
+}
+
+/* ----------------------- media ------------------------ */
+
+@media screen and (max-width: 400px) {
+
+	.buttons {
+		flex-direction: column;
+	}
+
+}

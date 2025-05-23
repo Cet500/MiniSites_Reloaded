@@ -1,0 +1,87 @@
+/* ---------------------------------- tabs ---------------------------------- */
+
+/* ----------------------- buttons ---------------------- */
+
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 15px;
+	background-color: var(--clr-blue-very-light);
+	border-radius: 10px;
+}
+.tab {
+	flex: 1;
+	padding: 8px 15px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	background: transparent;
+	color: var(--clr-blue-darker);
+	transition: all 0.2s;
+	position: relative;
+}
+.tab.active {
+	background: var(--clr-blue);
+	color: white;
+}
+
+/* ----------------------- content ---------------------- */
+
+.tab-content {
+	display: none;
+	min-height: 200px;
+	max-height: 60vh;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+.tab-content.active {
+	display: block;
+}
+.tab-content::-webkit-scrollbar{
+	background-color: var(--clr-blue-very-light);
+	width: 12px;
+	border-radius: 6px;
+}
+.tab-content::-webkit-scrollbar-thumb{
+	background-color: var(--clr-blue-light);
+	border-radius: 6px;
+}
+
+.tab-content .tab-preview{
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #424242;
+	font-style: italic;
+}
+
+/* --------------------- tab - pretty ------------------- */
+
+.pretty-output{
+
+}
+.password-item {
+	font-family: Consolas, monospace;
+	margin-bottom: 4px;
+	padding: 8px 16px;
+	background: var(--clr-blue-very-light);
+}
+.password-item:first-child {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.password-item:last-child {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	margin-bottom: 0;
+}
+
+/* -------------------- tab - another ------------------- */
+
+.code-output{
+	white-space: pre-wrap;
+	font-family: Consolas, monospace;
+	font-size: 16px;
+	line-height: 1.5;
+}

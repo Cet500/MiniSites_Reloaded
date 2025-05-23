@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Генератор паролей</title>
+
+		<link rel="stylesheet" href="css/global.css">
+		<link rel="stylesheet" href="css/buttons.css">
+		<link rel="stylesheet" href="css/tabs.css">
+	</head>
+
+	<body>
+		<div class="container">
+	        <div class="settings-panel">
+	            <h2 class="settings-panel__title">Генератор паролей <span>Pro</span></h2>
+
+		        <div class="form-group row">
+					<label for="length">Длина пароля:</label>
+			        <input type="number" id="length" min="4" max="64" value="12">
+		        </div>
+
+		        <div class="form-group row">
+			        <label for="count">Количество:</label>
+			        <input type="number" id="count" min="1" max="100" value="1">
+				</div>
+
+		        <div class="form-group column">
+			        <label>Использовать символы</label>
+
+			        <div class="checkbox-group">
+				        <label class="checkbox-item">
+					        <input type="checkbox" id="uppercase" checked>
+					        A-Z
+				        </label>
+
+				        <label class="checkbox-item">
+					        <input type="checkbox" id="lowercase" checked>
+					        a-z
+				        </label>
+
+				        <label class="checkbox-item">
+					        <input type="checkbox" id="numbers" checked>
+					        0-9
+				        </label>
+
+				        <label class="checkbox-item">
+					        <input type="checkbox" id="symbols">
+					        !@#$%
+				        </label>
+			        </div>
+		        </div>
+
+		        <div class="form-group column">
+			        <label>Использовать группировку</label>
+
+			        <div class="checkbox-group">
+				        <label class="checkbox-item">
+					        <input type="checkbox" id="autoGroup">
+					        Разбивать для удобства
+				        </label>
+			        </div>
+		        </div>
+
+		        <div class="buttons">
+					<button class="btn btn-primary" onclick="generatePassword()">Сгенерировать</button>
+		            <button class="btn btn-secondary" onclick="copyPassword()">Копировать</button>
+		        </div>
+			</div>
+
+	        <div class="output-panel">
+	            <div class="tabs">
+	                <button class="tab active" onclick="switchTab('pretty')">Pretty</button>
+	                <button class="tab" onclick="switchTab('plain')">Text</button>
+	                <button class="tab" onclick="switchTab('json')">JSON</button>
+		            <button class="tab" onclick="switchTab('xml')">XML</button>
+		            <button class="tab" onclick="switchTab('csv')">CSV</button>
+		            <button class="tab" onclick="switchTab('sql')">SQL</button>
+		            <button class="tab" onclick="switchTab('base64')">Base64</button>
+	            </div>
+
+	            <div id="prettyTab" class="tab-content active">
+	                <div class="pretty-output" id="passwordResult">
+		                <span class="tab-preview">Пароли появятся здесь после генерации...</span>
+	                </div>
+	            </div>
+
+	            <div id="plainTab" class="tab-content">
+	                <pre class="code-output plaintext-output" id="plainResult"></pre>
+	            </div>
+
+	            <div id="jsonTab" class="tab-content">
+	                <pre class="code-output json-output" id="jsonResult"></pre>
+	            </div>
+
+		        <div id="xmlTab" class="tab-content">
+			        <pre class="code-output xml-output" id="xmlResult"></pre>
+		        </div>
+
+		        <div id="csvTab" class="tab-content">
+			        <pre class="code-output сsv-output" id="csvResult"></pre>
+		        </div>
+
+		        <div id="sqlTab" class="tab-content">
+			        <pre class="code-output sql-output" id="sqlResult"></pre>
+		        </div>
+
+		        <div id="base64Tab" class="tab-content">
+			        <pre class="code-output base64-output" id="base64Result"></pre>
+		        </div>
+	        </div>
+		</div>
+
+		<script src="js/PassGenerate.js"></script>
+	</body>
+</html>
