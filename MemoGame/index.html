@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Найди пару!</title>
+
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<header class="header">
+			<h1 class="header__title">MemoGame</h1>
+
+			<div class="stats">
+				<p class="stats__block">
+					Ходы: <span id="moves">0</span>
+				</p>
+
+				<p class="stats__block">
+					Пар найдено: <span id="pairs">0</span> / 12
+				</p>
+
+				<label class="stats__block">
+					Набор карточек:
+					<select class="cards-set" name="cards-set" id="cards-set">
+						<option value="anime">Аниме</option>
+						<option value="gigachad">Гигачады</option>
+						<option value="xmas">Ёлочки</option>
+						<option value="snow">Снежинки</option>
+						<option value="stone">Камни</option>
+					</select>
+				</label>
+			</div>
+		</header>
+
+		<div class="game-board" id="gameBoard"></div>
+
+		<div id="winModal" class="modal">
+			<div class="modal-content">
+				<h2>🎉 Победа!</h2>
+
+				<p>Вы нашли все 12 пар за <span id="finalMoves">0</span> ходов!</p>
+
+				<button onclick="restartGame()">Играть снова</button>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
