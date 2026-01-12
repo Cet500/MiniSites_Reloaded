@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Новогодний таймер</title>
+
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				margin: 0;
+
+				background-image: url("https://img.goodfon.ru/wallpaper/nbig/d/44/ukrasheniia-fon-shary-rozhdestvo-novyi-god-golden-new-yea-10.webp");
+				background-size: cover;
+			}
+			.time {
+				font-size: 100px;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="time">
+			<span id="time_day">00</span> : <span id="time_hour">00</span> :
+			<span id="time_min">00</span> :
+			<span id="time_sec">00</span>
+		</div>
+
+		<script>
+			const target = new Date(2027, 0, 1, 0, 0, 0);
+
+			function pad(n) {
+				return String(n).padStart(2, "0");
+			}
+
+			function tick() {
+				const t = target - new Date();
+				const s = Math.floor(t / 1000);
+
+				const days = Math.floor(s / 86400);
+				const hours = Math.floor((s % 86400) / 3600);
+				const mins = Math.floor((s % 3600) / 60);
+				const secs = s % 60;
+
+				document.getElementById("time_day").textContent = days;
+				document.getElementById("time_hour").textContent = pad(hours);
+				document.getElementById("time_min").textContent = pad(mins);
+				document.getElementById("time_sec").textContent = pad(secs);
+			}
+			tick();
+
+			const timer = setInterval(tick, 1000);
+		</script>
+	</body>
+</html>

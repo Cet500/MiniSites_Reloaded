@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>MiniSites: Reloaded | Проекты</title>
 
@@ -24,8 +24,10 @@
 
 			body {
 				margin: 0;
-				font-family: 'Segoe UI', sans-serif;
-				transition: background 0.3s, color 0.3s;
+				font-family: "Segoe UI", sans-serif;
+				transition:
+					background 0.3s,
+					color 0.3s;
 			}
 
 			.light {
@@ -83,7 +85,9 @@
 				margin-bottom: 1.5rem;
 				border-radius: 14px;
 				overflow: hidden;
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				transition:
+					transform 0.3s ease,
+					box-shadow 0.3s ease;
 			}
 
 			li:hover {
@@ -145,21 +149,47 @@
 			}
 
 			/* Статусы с темами */
-			.light .status.ready { background: #d4f4d2; color: #1e561e; }
-			.dark .status.ready { background: #295c2e; color: #a2f6a2; }
+			.light .status.ready {
+				background: #d4f4d2;
+				color: #1e561e;
+			}
+			.dark .status.ready {
+				background: #295c2e;
+				color: #a2f6a2;
+			}
 
-			.light .status.wip { background: #fff3cd; color: #856404; }
-			.dark .status.wip { background: #5c4d1d; color: #ffe98f; }
+			.light .status.wip {
+				background: #fff3cd;
+				color: #856404;
+			}
+			.dark .status.wip {
+				background: #5c4d1d;
+				color: #ffe98f;
+			}
 
-			.light .status.error { background: #f8d7da; color: #721c24; }
-			.dark .status.error { background: #5c1d22; color: #fbb2b7; }
+			.light .status.error {
+				background: #f8d7da;
+				color: #721c24;
+			}
+			.dark .status.error {
+				background: #5c1d22;
+				color: #fbb2b7;
+			}
 
-			.status.none { display: none; }
+			.status.none {
+				display: none;
+			}
 		</style>
 	</head>
 
 	<body class="light">
-		<button class="theme-toggle" onclick="toggleTheme()" title="Переключить тему">🌙</button>
+		<button
+			class="theme-toggle"
+			onclick="toggleTheme()"
+			title="Переключить тему"
+		>
+			🌙
+		</button>
 
 		<div class="container">
 			<h1>MiniSites: Reloaded | Проекты</h1>
@@ -214,7 +244,9 @@
 					<a class="project-link" href="EasyPaint/index.html">
 						<div class="project-title">EasyPaint</div>
 						<div class="path">EasyPaint/index.html</div>
-						<div class="status wip">Работает не всё к сожалению</div>
+						<div class="status wip">
+							Работает не всё к сожалению
+						</div>
 						<div class="number-badge">6</div>
 					</a>
 				</li>
@@ -227,6 +259,26 @@
 						<div class="number-badge">7</div>
 					</a>
 				</li>
+
+				<li>
+					<a class="project-link" href="MemoGame/index.html">
+						<div class="project-title">Игра на память</div>
+						<div class="path">MemoGame/index.html</div>
+						<div class="status ready">Готово</div>
+						<div class="number-badge">8</div>
+					</a>
+				</li>
+
+				<li>
+					<a class="project-link" href="NewYearTimer/index.html">
+						<div class="project-title">
+							Простой отсчёт до нового года
+						</div>
+						<div class="path">NewYearTimer/index.html</div>
+						<div class="status ready">Готово</div>
+						<div class="number-badge">8</div>
+					</a>
+				</li>
 			</ol>
 		</div>
 
@@ -236,7 +288,9 @@
 				const isLight = body.classList.contains("light");
 				body.classList.toggle("light", !isLight);
 				body.classList.toggle("dark", isLight);
-				document.querySelector('.theme-toggle').textContent = isLight ? '☀️' : '🌙';
+				document.querySelector(".theme-toggle").textContent = isLight
+					? "☀️"
+					: "🌙";
 			}
 		</script>
 	</body>
